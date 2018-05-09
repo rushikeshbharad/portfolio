@@ -1,0 +1,14 @@
+.top-navigator {
+  background-color: darkgray;
+  border-radius: 4px;
+  bottom: 24px;
+  cursor: pointer;
+  display: flex;
+  font-size: 24px;
+  height: 36px;
+  justify-content: center;
+  line-height: 44px;
+  position: fixed;
+  right: 24px;
+  width: 36px;
+}

@@ -1,0 +1,48 @@
+.spinner-container {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #515151;
+}
+
+.top-left,
+.top-right,
+.bottom-right,
+.bottom-left {
+  height: 0;
+  width: 0;
+  background-color: #dddddd;
+  border-radius: 12px;
+  margin: 24px;
+  position: absolute;
+  transition: all 500ms ease;
+}
+
+.top-left {
+  top: 25%;
+  left: 25%;
+}
+
+.top-right {
+  top: 25%;
+  right: 25%;
+}
+
+.bottom-right {
+  bottom: 25%;
+  right: 25%;
+}
+
+.bottom-left {
+  bottom: 25%;
+  left: 25%;
+}
+
+.spinner {
+  height: 24px;
+  margin: 12px;
+  width: 24px;
+}
