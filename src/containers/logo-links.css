@@ -1,8 +1,15 @@
 .logo-links {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    position: fixed;
-    left: 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  left: -36px;
+  opacity: 0;
+  position: fixed;
+  transition: left 1.5s ease, opacity 0.5s ease;
+}
+
+.logo-links.show {
+  left: 8px;
+  opacity: 1;
 }

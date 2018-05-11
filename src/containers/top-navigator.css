@@ -3,12 +3,19 @@
   border-radius: 4px;
   bottom: 24px;
   cursor: pointer;
-  display: flex;
   font-size: 24px;
-  height: 36px;
+  height: 0;
   justify-content: center;
   line-height: 44px;
+  opacity: 0;
   position: fixed;
   right: 24px;
+  text-align: center;
+  transition: opacity 1s ease;
   width: 36px;
+}
+
+.top-navigator.show {
+  height: 36px;
+  opacity: 1;
 }

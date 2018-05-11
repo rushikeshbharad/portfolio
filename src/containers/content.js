@@ -5,7 +5,7 @@ import Styles from './content.css';
 const cx = ClassNames.bind(Styles);
 
 const Content = ({ index, children, classNames }) => (
-  <div id={index} className={cx('content', index % 2 === 0 ? 'even' : 'odd', classNames)}>
+  <div className={cx('content', index % 2 === 0 ? 'even' : 'odd', classNames)}>
     {children}
   </div>
 );

@@ -5,14 +5,10 @@ import Styles from './recent-work.css';
 const cx = ClassNames.bind(Styles);
 
 class RecentWork extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className={cx('recent-work-container')}>
-        <div />
+        <div></div>
       </div>
     );
   }

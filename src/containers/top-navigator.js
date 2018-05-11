@@ -35,16 +35,22 @@ class TopNavigator extends Component {
     });
   }
 
-  render() {
-    if (this.state.shouldDisplayTopNavigator) {
-      return (
-        <div className={cx('top-navigator')} onClick={scrollTop}>
-          ^
-        </div>
-      );
-    }
+  componentWillUnmount() {
+    window.removeEventListener('scroll');
+  }
 
-    return null;
+  render() {
+    return (
+      <div
+        className={cx(
+          'top-navigator',
+          this.state.shouldDisplayTopNavigator && 'show',
+        )}
+        onClick={scrollTop}
+      >
+        ^
+      </div>
+    );
   }
 }
 

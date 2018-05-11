@@ -11,6 +11,15 @@
   width: 100%;
 }
 
+.header-container {
+  background-image: url('../images/quality-product.JPG');
+  background-size: cover;
+  background-position-y: 40%;
+  background-repeat: no-repeat;
+  color: white;
+  padding-top: 200px;
+}
+
 .even {
   color: #515151;
   background-color: #dddddd;
@@ -23,12 +32,11 @@
 
 @media screen and (max-width: 600px) {
   .content {
-    align-items: unset;
     font-size: 20px;
     padding: 0 48px;
   }
 
   .header-container {
-    padding: 92px 48px 0;
+    background-position-x: 50%;
   }
 }
