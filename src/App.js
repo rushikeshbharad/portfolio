@@ -34,7 +34,7 @@ class App extends Component {
         <TopNavigator />
         <Content index={1} classNames={cx('header-container')}>
           <span className={cx('header')}>
-            Web developer, committed towards delivering a quality product
+            Web Developer, Committed Towards Delivering A Quality Product
           </span>
         </Content>
         <Content index={2}>

@@ -1,0 +1,21 @@
+.experience-title {
+  margin: 24px 0;
+  text-align: left;
+}
+
+.experience-bullet-container {
+  font-size: 24px;
+  margin-left: 56px;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .experience-bullet-container {
+    font-size: 14px;
+    margin-left: 32px;
+  }
+
+  .experience-title {
+    margin: 16px 0;
+  }
+}

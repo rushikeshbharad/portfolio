@@ -14,6 +14,12 @@ class LogoLinks extends Component {
     };
   }
 
+  onBlur = () => {
+    this.setState({
+        hasBlurred: true
+    });
+  };
+
   componentDidMount() {
     window.addEventListener('scroll', () => {
       this.setState({
@@ -36,8 +42,9 @@ class LogoLinks extends Component {
     return (
       <div
         className={cx('logo-links', this.state.shouldDisplayLinks && 'show')}
+        onBlur={this.onBlur}
       >
-        {logoLinks.map((props, key) => <LogoLink key={key} {...props} />)}
+        {logoLinks.map((props, key) => <LogoLink key={key} {...props} hasBlurred={this.state.hasBlurred} />)}
       </div>
     );
   }
