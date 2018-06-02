@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import ClassNames from 'classnames/bind';
+import { RECENT_WORK } from "../constants";
 import Styles from './recent-work.css';
 
 const cx = ClassNames.bind(Styles);
 
-const Experience = ({ title, description }) => (
+const Experience = ({ title, description, duration }) => (
   <div className={cx('experience-container')}>
-    <div className={cx('experience-title')}>{title}</div>
+    <div className={cx('experience-header')}>
+      <div className={cx('experience-title')}>{title}</div>
+      <div className={cx('experience-duration')}>{duration}</div>
+    </div>
     <ul className={cx('experience-bullet-container')}>
       {description.map((bullet, key) => (
           <li className={cx('experience-bullet')} key={key}>
@@ -22,22 +26,14 @@ class RecentWork extends Component {
     return (
       <div className={cx('recent-work-container')}>
         <Experience
-          title="1.5+ years in RSL"
-          description={[
-            'with client "Nest (Google)"',
-            'worked for Home automation device monitoring',
-            'have participated in shipping 15+ major releases',
-            'stack involved - Javascript (ES6/7), React.js, Redux.js',
-          ]}
+          title={RECENT_WORK.RSL.TITLE}
+          description={RECENT_WORK.RSL.DESCRIPTION}
+          duration={RECENT_WORK.RSL.DURATION}
         />
         <Experience
-          title="2 years in Cognizant"
-          description={[
-            'with client "JP Morgan & Chase"',
-            'have shipped confidential work',
-            'Desktop applications and console automators',
-            'stacks involved - Javascript ASP.NET, C#, WCF',
-          ]}
+          title={RECENT_WORK.COGNIZANT.TITLE}
+          description={RECENT_WORK.COGNIZANT.DESCRIPTION}
+          duration={RECENT_WORK.COGNIZANT.DURATION}
         />
       </div>
     );

@@ -7,7 +7,7 @@ const cx = ClassNames.bind(Styles);
 let scrollTimer;
 
 const scrollTop = () => {
-  if (document.documentElement.scrollTop !== 0) {
+  if (document.documentElement.scrollTop || document.body.scrollTop) {
     window.scrollBy(0, -10);
     scrollTimer = setTimeout(scrollTop, 1);
   } else {
@@ -24,15 +24,18 @@ class TopNavigator extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', () => {
-      let shouldDisplayTopNavigator = document.documentElement.scrollTop > 480;
+    const onScroll = () => {
+      let shouldDisplayTopNavigator = document.documentElement.scrollTop > 480 || document.body.scrollTop > 480;
 
       if (this.state.shouldDisplayTopNavigator !== shouldDisplayTopNavigator) {
         this.setState({
           shouldDisplayTopNavigator,
         });
       }
-    });
+    };
+
+    window.addEventListener('scroll', onScroll);
+    document.body.addEventListener('touchmove', onScroll);
   }
 
   componentWillUnmount() {

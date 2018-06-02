@@ -1,0 +1,47 @@
+.responsibility-title {
+  font-size: 48px;
+  margin: 24px 0;
+}
+
+.responsibility-bullets {
+  height: 280px;
+  overflow-y: auto;
+  font-size: 44px;
+}
+
+.responsibility-bullet {
+  transition: opacity 0.3s ease, font-size 0.3s ease;
+}
+
+.opt20 {
+  opacity: 0.2;
+}
+
+.opt50 {
+  opacity: 0.5;
+  font-size: 52px;
+}
+
+.opt100 {
+  font-size: 64px;
+}
+
+@media screen and (max-width: 600px) {
+  .responsibility-title {
+    font-size: 22px;
+  }
+
+  .responsibility-bullets {
+    font-size: 20px;
+    height: 128px;
+    margin: 48px 0 0 0;
+  }
+
+  .opt50 {
+    font-size: 22px;
+  }
+
+  .opt100 {
+    font-size: 28px;
+  }
+}

@@ -4,6 +4,7 @@ import Spinner from './components/spinner';
 import LogoLinks from './containers/logo-links';
 import Reliability from './containers/reliability';
 import RecentWork from './containers/recent-work';
+import Responsibiity from './containers/responsibility';
 import TopNavigator from './containers/top-navigator';
 import Content from './containers/content';
 import Styles from './App.css';
@@ -43,7 +44,9 @@ class App extends Component {
         <Content index={3}>
           <RecentWork />
         </Content>
-        <Content index={4} />
+        <Content index={4}>
+          <Responsibiity />
+        </Content>
         <Content index={5} />
         <Content index={6}>
           <div className={cx('personal-info')}>

@@ -1,6 +1,14 @@
-.experience-title {
+.experience-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   margin: 24px 0;
   text-align: left;
+}
+
+.experience-duration {
+  font-size: 18px;
+  font-style: italic;
 }
 
 .experience-bullet-container {
@@ -15,7 +23,14 @@
     margin-left: 32px;
   }
 
-  .experience-title {
+  .experience-header {
+    display: unset;
     margin: 16px 0;
+  }
+
+  .experience-duration {
+    font-size: 12px;
+    margin: 8px 0;
+    text-align: right;
   }
 }
