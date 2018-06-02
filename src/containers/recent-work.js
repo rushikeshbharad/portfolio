@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { string, arrayOf } from 'prop-types';
 import ClassNames from 'classnames/bind';
-import { RECENT_WORK } from "../constants";
+import { RECENT_WORK } from '../constants';
 import Styles from './recent-work.css';
 
 const cx = ClassNames.bind(Styles);
@@ -13,13 +14,19 @@ const Experience = ({ title, description, duration }) => (
     </div>
     <ul className={cx('experience-bullet-container')}>
       {description.map((bullet, key) => (
-          <li className={cx('experience-bullet')} key={key}>
-            {bullet}
-          </li>
+        <li className={cx('experience-bullet')} key={key}>
+          {bullet}
+        </li>
       ))}
     </ul>
   </div>
 );
+
+Experience.propTypes = {
+  title: string,
+  description: arrayOf(string),
+  duration: string
+};
 
 class RecentWork extends Component {
   render() {

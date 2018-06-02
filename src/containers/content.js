@@ -1,4 +1,5 @@
 import React from 'react';
+import { number, string, element } from 'prop-types'
 import ClassNames from 'classnames/bind';
 import Styles from './content.css';
 
@@ -9,5 +10,11 @@ const Content = ({ index, children, classNames }) => (
     {children}
   </div>
 );
+
+Content.propTypes = {
+    index: number,
+    children: element,
+    classNames: string
+};
 
 export default Content;

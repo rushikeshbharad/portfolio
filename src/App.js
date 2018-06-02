@@ -4,8 +4,10 @@ import Spinner from './components/spinner';
 import LogoLinks from './containers/logo-links';
 import Reliability from './containers/reliability';
 import RecentWork from './containers/recent-work';
-import Responsibiity from './containers/responsibility';
+import Responsibility from './containers/responsibility';
+import SkillSet from './containers/skill-sets';
 import TopNavigator from './containers/top-navigator';
+import About from './containers/about';
 import Content from './containers/content';
 import Styles from './App.css';
 
@@ -45,14 +47,13 @@ class App extends Component {
           <RecentWork />
         </Content>
         <Content index={4}>
-          <Responsibiity />
+          <SkillSet />
         </Content>
-        <Content index={5} />
+        <Content index={5}>
+          <Responsibility />
+        </Content>
         <Content index={6}>
-          <div className={cx('personal-info')}>
-            <div className={cx('pic')} />
-            <div className={cx('name')}>Rushikesh Bharad</div>
-          </div>
+          <About />
         </Content>
       </Fragment>
     );

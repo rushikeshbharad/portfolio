@@ -1,0 +1,50 @@
+.profile-personal-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  height: 84px;
+  width: 84px;
+  border-radius: 42px;
+  background-color: white;
+  background-image: url("../../src/images/profile-pic.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: height 0.3s, width 0.3s, border-radius 0.3s;
+}
+
+.profile-pic:hover {
+  height: 160px;
+  width: 160px;
+  border-radius: 80px;
+}
+
+.profile-name {
+  margin-left: 8px;
+}
+
+.profile-contact {
+  margin-top: 24px;
+}
+
+.profile-email {
+  color: #515151;
+  font-size: 28px;
+}
+
+@media screen and (max-width: 600px) {
+  .profile-pic, .profile-pic:hover {
+    height: 72px;
+    width: 72px;
+    border-radius: 36px;
+  }
+
+  .profile-name {
+    width: 100px;
+  }
+
+  .profile-email {
+    font-size: 20px;
+  }
+}

@@ -13,13 +13,17 @@ class Spinner extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
-        let count = +Object.keys(this.state.spinner);
-        count = count + 1 > 3 ? 0 : count + 1;
-        this.setState({
-            spinner: { [count]: 'spinner' },
-        });
+    this.spinnerTimer = setInterval(() => {
+      let count = +Object.keys(this.state.spinner);
+      count = count + 1 > 3 ? 0 : count + 1;
+      this.setState({
+        spinner: { [count]: 'spinner' },
+      });
     }, 600);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.spinnerTimer);
   }
 
   render() {
