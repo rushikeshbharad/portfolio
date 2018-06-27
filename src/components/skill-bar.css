@@ -4,17 +4,17 @@
 }
 
 .skill-bar-holder {
-  background-color: #515151;
+  background-color: #dddddd;
+  border: solid 2px #525252;
   border-radius: 4px;
   box-sizing: border-box;
   height: 8px;
   margin: 8px 0 16px 0;
-  padding: 2px;
   width: 480px;
 }
 
 .skill-bar {
-  background-color: #dddddd;
+  background-color: #525252;
   height: 4px;
   width: 0;
   transition: width 0.3s ease;
