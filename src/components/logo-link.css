@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 4px;
+  box-sizing: border-box;
   cursor: pointer;
   height: 36px;
   margin: 2px 0;
@@ -17,15 +18,15 @@
 }
 
 .github {
-  background-image: url('../images/github.png');
+  padding: 2px;
 }
 
 .linkedin {
-  background-image: url('../images/linkedin.png');
+  padding: 8px;
 }
 
 .stackoverflow {
-  background-image: url('../images/stackoverflow.png');
+  padding: 2px;
 }
 
 .logo.hasBlurred {
