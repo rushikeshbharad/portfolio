@@ -11,11 +11,16 @@
   position: fixed;
   right: 24px;
   text-align: center;
-  transition: opacity 1s ease;
+  transition: height 1s ease, opacity 1s ease;
   width: 36px;
 }
 
 .top-navigator.show {
   height: 36px;
   opacity: 1;
+}
+
+.top-navigator.show:hover {
+  background-color: #222222;
+  color: darkgray;
 }

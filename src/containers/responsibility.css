@@ -10,7 +10,7 @@
 }
 
 .responsibility-bullet {
-  transition: opacity 0.3s ease, font-size 0.3s ease;
+  transition: height 0.3s ease, opacity 0.3s ease, font-size 0.3s ease;
 }
 
 .opt20 {

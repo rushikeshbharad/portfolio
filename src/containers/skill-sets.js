@@ -58,10 +58,9 @@ class SkillSets extends Component {
 
   componentDidMount() {
     const onScroll = () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const isBelowThirdContainer = scrollTop > 480 * 2.5;
-      const isAboveFourthContainer = scrollTop < 480 * 3.5;
-      const shouldDisplaySkills = isBelowThirdContainer && isAboveFourthContainer;
+      const containerPosition = this.skills.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const shouldDisplaySkills = containerPosition > 0 && containerPosition <= windowHeight;
 
       if (shouldDisplaySkills !== this.state.shouldDisplaySkills) {
         if (shouldDisplaySkills) {
@@ -86,7 +85,12 @@ class SkillSets extends Component {
 
   render() {
     return (
-      <div className={cx('skill-sets-container')}>
+      <div
+        className={cx('skill-sets-container')}
+        ref={skills => {
+          this.skills = skills;
+        }}
+      >
         {skills
           .map((s, i) => (<SkillBar key={i} skill={s} shouldProgress={this.state.skillVisibility[i]} />))
           .filter(e => e)
