@@ -30,20 +30,10 @@
   width: 48px;
 }
 
-.ship-icon {
-  background-image: url('../images/ship.png');
-}
-
-.user-focused-icon {
-  background-image: url('../images/user-focused.png');
-}
-
-.responsive-icon {
-  background-image: url('../images/responsive.png');
-}
-
-.code-quality-icon {
-  background-image: url('../images/code-quality.png');
+.reliability-icon {
+  fill: currentColor;
+  height: 48px;
+  width: 48px;
 }
 
 @media screen and (max-width: 600px) {
