@@ -35,10 +35,18 @@
     transform-origin: 17% 56%;
 }
 
+.cycle-handle.animate {
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: 3.5;
+    animation-timing-function: linear;
+    transform-origin: 70%;
+}
+
 .cycle-path {
     left: 0;
     position: absolute;
-    top: 48px;
+    top: 40px;
 }
 
 .cycle-path svg {
@@ -50,10 +58,56 @@
 }
 
 .header-title {
-    margin-top: 284px;
+    margin-top: 320px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header-title {
+        margin-top: 284px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-title {
+        margin-top: 252px;
+    }
+
+    .cycle-tyre-1, .cycle-tyre-2, .cycle-rest {
+        top: 72px;
+    }
+
+    .cycle-path {
+        top: 64px;
+    }
+
+    .cycle-path svg {
+        width: 33.33%;
+    }
+
+    .cycle-path svg:last-child {
+        display: none;
+    }
+
+    .cycle-tyre-1, .cycle-tyre-2, .cycle-rest {
+        width: 33.33%;
+    }
+
+    .cycle-tyre-1.animate, .cycle-tyre-2.animate, .cycle-rest.animate {
+        margin-left: 66.67%;
+        transition: margin-left 3s linear;
+    }
+
+    .cycle-handle.animate, .cycle-tyre-1.animate, .cycle-tyre-2.animate {
+        animation-iteration-count: 2.75;
+    }
 }
 
 @keyframes rotate {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
+}
+
+@keyframes move {
+    from {transform: rotateY(-45deg);}
+    to {transform: rotateY(45deg);}
 }
