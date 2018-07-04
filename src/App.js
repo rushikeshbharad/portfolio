@@ -9,6 +9,7 @@ import SkillSet from './containers/skill-sets';
 import TopNavigator from './containers/top-navigator';
 import About from './containers/about';
 import Content from './containers/content';
+import Header from './components/header';
 import Styles from './App.css';
 
 const cx = ClassNames.bind(Styles);
@@ -36,9 +37,7 @@ class App extends Component {
         <LogoLinks />
         <TopNavigator />
         <Content index={1} classNames={cx('header-container')}>
-          <span className={cx('header')}>
-            Web Developer, Committed Towards Delivering A Quality Product
-          </span>
+          <Header />
         </Content>
         <Content index={2}>
           <Reliability />
